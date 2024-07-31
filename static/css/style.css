@@ -1,0 +1,114 @@
+/* Global styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    /* Background for the whole page */
+}
+
+/* Styles for the game container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Align children (board and turn indicator) in the center */
+}
+
+/* Style for the turn indicator */
+.player-turn-index {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    /* Match the width of the board */
+    order: -1;
+}
+
+/* Styles for the chess board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 80px);
+    /* 8 columns with 80px width each */
+    grid-template-rows: repeat(8, 80px);
+    /* 8 rows with 80px height each */
+    border: 15px solid #1f0404d7;
+    /* Border around the entire board */
+}
+
+/* Styles for the board squares */
+.square {
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    border: 1px solid #1f0404d7;
+    /* Border around each square */
+}
+
+/* Styles for black squares */
+.black {
+    background-color: #1f0404d7;
+}
+
+/* Styles for white squares */
+.white {
+    background-color: white;
+}
+
+/* Styles for chess pieces */
+.piece {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    /* Make the pieces circular */
+    margin: 10%;
+    /* Provide some spacing within the square */
+    box-sizing: border-box;
+}
+
+/* Styles for Player One's pieces */
+.player-one {
+    background-color: bisque;
+    border: 4px solid rgb(236, 201, 159);
+}
+
+/* Styles for Player Two's pieces */
+.player-two {
+    background-color: rgb(16, 16, 16);
+    border: 4px solid #000000;
+}
+
+/* Styles for the selected piece */
+.selected {
+    border: 4px solid rgb(255, 0, 0);
+    /* Red border for selected pieces */
+}
+
+/* Styles for kings */
+.king img {
+    width: 100%;
+    /* Ensure the image takes up the entire space */
+    height: 100%;
+    border-radius: 50%;
+    /* Keep the circular border for the king */
+    object-fit: cover;
+    /* Ensure the image covers the entire space */
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.board.player-one-turn {
+    border-color: bisque;
+}
+
+.board.player-two-turn {
+    border-color: rgb(16, 16, 16);
+}
+
+.square.highlighted {
+    background-color: green;
+}
